@@ -18,7 +18,7 @@ function makePod {
 #########GLOBAL VARIABLES###############
 FLAG="$1"
 
-PODMOD="$(grep "VERSION_FROM" Makefile.PL | cut -d "'" -f 2-2)"
+PODMOD="$(grep "VERSION_FROM" ../Makefile.PL | cut -d "'" -f 2-2)"
 
 #####TESTING
 if [ "$FLAG" == 'test' ]
