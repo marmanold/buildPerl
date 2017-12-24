@@ -1,8 +1,8 @@
-#buildPerl
+# buildPerl
 
 A simple bash script to help build Perl modules for distribution to CPAN.
 
-##Installation
+## Installation
 
 buildPerl assumes that is it in the `_buildPerl` directory at the root of your Perl project.  The intent is that buildPerl will be included in your project as a [Git Submodule](https://github.com/blog/2104-working-with-submodules).
 
@@ -10,9 +10,9 @@ buildPerl assumes that is it in the `_buildPerl` directory at the root of your P
 chmod +x buildPerl.sh
 ```
 
-##Usage
+## Usage
 
-###Testing
+### Testing
 
 When you are testing your module buildPerl will make your project, update your README documentation, and run your test suite in verbose mode.
 
@@ -20,7 +20,7 @@ When you are testing your module buildPerl will make your project, update your R
 ./buildPerl test
 ```
 
-###Distribution
+### Distribution
 
 When you are ready to package your module for CPAN or another repository, buildPerl will make your project, update your README documentation, then test and build your distribution tar-ball.
 
