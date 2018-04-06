@@ -36,7 +36,7 @@ then
     makefile
     makePod
     make test TEST_VERBOSE=1
-    prove -l xt\*.t
+    prove -l xt/*.t
 fi
 
 #####BUILD DISTRIBUTION
