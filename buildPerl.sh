@@ -36,7 +36,7 @@ then
     makefile
     makePod
     make test TEST_VERBOSE=1
-    make author TEST_VERBOSE=1
+    make test TEST_FILE='xt\*.t' TEST_VERBOSE=1
 fi
 
 #####BUILD DISTRIBUTION
