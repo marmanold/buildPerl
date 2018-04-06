@@ -1,6 +1,6 @@
 #!/bin/bash
 
-## VERSION 1.20171223 ##
+## VERSION 1.20180406 ##
 
 #######FUNCTIIONS##########
 function makefile {
@@ -29,13 +29,23 @@ then
     make test TEST_VERBOSE=1
 fi
 
+#####AUTHOR TESTS
+if [ "$FLAG" == 'auth' ]
+then
+    cd ..
+    makefile
+    makePod
+    make test TEST_VERBOSE=1
+    make author TEST_VERBOSE=1
+fi
+
 #####BUILD DISTRIBUTION
 if [ "$FLAG" == 'dist' ]
 then
     cd ..
     makefile
     makePod
-    make distdir && make disttest && make dist && make tardist
+    make distdir && make disttest && make distcheck && make dist && make tardist
 fi
 
 
