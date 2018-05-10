@@ -1,6 +1,6 @@
 #!/bin/bash
 
-## VERSION 1.20180406 ##
+## VERSION 1.20180510 ##
 
 #######FUNCTIIONS##########
 function makefile {
@@ -26,7 +26,7 @@ then
     cd ..
     makefile
     makePod
-    make test TEST_VERBOSE=1
+    prove -l -v t/*.t
 fi
 
 #####AUTHOR TESTS
@@ -35,7 +35,7 @@ then
     cd ..
     makefile
     makePod
-    make test TEST_VERBOSE=1
+    prove -l t/*.t
     prove -l xt/*.t
 fi
 
